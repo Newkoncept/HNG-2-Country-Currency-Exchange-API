@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "api.apps.ApiConfig"
+    "api.apps.ApiConfig",
+    "rest_framework"
 ]
 
 MIDDLEWARE = [
@@ -54,6 +55,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_ROUTER_TRAILING_SLASH': False,
+}
+
 
 ROOT_URLCONF = 'countrycurrencyexchange.urls'
 
